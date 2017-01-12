@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.HoldInfoUserMapper" >
+  <resultMap id="BaseResultMap" type="sy.model.HoldInfoUser" >
+    <result column="USER_NO" property="userNo" jdbcType="VARCHAR" />
+    <result column="DEVICE_NUMBER" property="deviceNumber" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_NO" property="customerNo" jdbcType="VARCHAR" />
+    <result column="SVC_ID" property="svcId" jdbcType="VARCHAR" />
+    <result column="SVC_DESC" property="svcDesc" jdbcType="VARCHAR" />
+    <result column="AREA_ID" property="areaId" jdbcType="VARCHAR" />
+    <result column="CITY_ID" property="cityId" jdbcType="VARCHAR" />
+    <result column="AREA_DESC" property="areaDesc" jdbcType="VARCHAR" />
+    <result column="CITY_DESC" property="cityDesc" jdbcType="VARCHAR" />
+    <result column="BRAND_TYPE" property="brandType" jdbcType="VARCHAR" />
+    <result column="BRAND_DESC" property="brandDesc" jdbcType="VARCHAR" />
+    <result column="INNET_TYPE_CODE" property="innetTypeCode" jdbcType="VARCHAR" />
+    <result column="INNET_TYPE" property="innetType" jdbcType="VARCHAR" />
+    <result column="INNET_TYPE_DESC" property="innetTypeDesc" jdbcType="VARCHAR" />
+    <result column="SALE_TYPE_CODE" property="saleTypeCode" jdbcType="VARCHAR" />
+    <result column="SALE_TYPE" property="saleType" jdbcType="VARCHAR" />
+    <result column="ASSURE_NO" property="assureNo" jdbcType="VARCHAR" />
+    <result column="PAY_TYPE_CODE" property="payTypeCode" jdbcType="VARCHAR" />
+    <result column="PAY_TYPE" property="payType" jdbcType="VARCHAR" />
+    <result column="PAY_MODE_CODE" property="payModeCode" jdbcType="VARCHAR" />
+    <result column="PAY_MODE" property="payMode" jdbcType="VARCHAR" />
+    <result column="USER_PROPERTY_CODE" property="userPropertyCode" jdbcType="VARCHAR" />
+    <result column="USER_PROPERTY" property="userProperty" jdbcType="VARCHAR" />
+    <result column="STATUS_CODE" property="statusCode" jdbcType="VARCHAR" />
+    <result column="USER_STATUS_DESC" property="userStatusDesc" jdbcType="VARCHAR" />
+    <result column="INNET_DATE" property="innetDate" jdbcType="TIMESTAMP" />
+    <result column="FIRST_CALL_TIME" property="firstCallTime" jdbcType="TIMESTAMP" />
+    <result column="SHUT_DOWN_TIME" property="shutDownTime" jdbcType="TIMESTAMP" />
+    <result column="QUIT_NET_TIME" property="quitNetTime" jdbcType="TIMESTAMP" />
+    <result column="INNET_MONTH" property="innetMonth" jdbcType="DECIMAL" />
+    <result column="USER_DINNER" property="userDinner" jdbcType="VARCHAR" />
+    <result column="USER_DINNER_DESC" property="userDinnerDesc" jdbcType="VARCHAR" />
+    <result column="DINNER_DESC" property="dinnerDesc" jdbcType="VARCHAR" />
+    <result column="OFFICE_CODE" property="officeCode" jdbcType="VARCHAR" />
+    <result column="OFFICE" property="office" jdbcType="VARCHAR" />
+    <result column="OFFICE_DETAIL" property="officeDetail" jdbcType="VARCHAR" />
+    <result column="GROUP_ID" property="groupId" jdbcType="VARCHAR" />
+    <result column="GROUP_NAME" property="groupName" jdbcType="VARCHAR" />
+    <result column="GROUP_USER_TYPE_CODE" property="groupUserTypeCode" jdbcType="VARCHAR" />
+    <result column="GROUP_USER_TYPE" property="groupUserType" jdbcType="VARCHAR" />
+    <result column="GROUP_ITEM_ID" property="groupItemId" jdbcType="VARCHAR" />
+    <result column="GROUP_ITEM_NAME" property="groupItemName" jdbcType="VARCHAR" />
+    <result column="GROUP_ITEM_TYPE_CODE" property="groupItemTypeCode" jdbcType="VARCHAR" />
+    <result column="GROUP_ITEM_TYPE" property="groupItemType" jdbcType="VARCHAR" />
+    <result column="GROUP_USER_PROPERTY_CODE" property="groupUserPropertyCode" jdbcType="VARCHAR" />
+    <result column="GROUP_USER_PROPERTY" property="groupUserProperty" jdbcType="VARCHAR" />
+    <result column="CRIDIT_LEVEL_CODE" property="criditLevelCode" jdbcType="VARCHAR" />
+    <result column="CRIDIT_LEVEL" property="criditLevel" jdbcType="VARCHAR" />
+    <result column="ALL_CHARGE" property="allCharge" jdbcType="DECIMAL" />
+    <result column="CONSUME_LVL" property="consumeLvl" jdbcType="VARCHAR" />
+    <result column="CONSUME_LVL_DESC" property="consumeLvlDesc" jdbcType="VARCHAR" />
+    <result column="IS_ACCT_USER" property="isAcctUser" jdbcType="VARCHAR" />
+    <result column="ARPU_LAST_MONTH" property="arpuLastMonth" jdbcType="DECIMAL" />
+    <result column="ARPU_6MONTH" property="arpu6month" jdbcType="DECIMAL" />
+    <result column="HIGH_TYPE" property="highType" jdbcType="VARCHAR" />
+    <result column="HIGH_TYPE_DESC" property="highTypeDesc" jdbcType="VARCHAR" />
+    <result column="CARD_NO" property="cardNo" jdbcType="VARCHAR" />
+    <result column="USER_CLASS_CODE" property="userClassCode" jdbcType="VARCHAR" />
+    <result column="USER_CLASS" property="userClass" jdbcType="VARCHAR" />
+    <result column="ENTER_MONTH" property="enterMonth" jdbcType="VARCHAR" />
+    <result column="USER_FLAG_CODE" property="userFlagCode" jdbcType="VARCHAR" />
+    <result column="USER_FLAG" property="userFlag" jdbcType="VARCHAR" />
+    <result column="LAST_USER_FLAG_CODE" property="lastUserFlagCode" jdbcType="VARCHAR" />
+    <result column="LAST_USER_FLAG" property="lastUserFlag" jdbcType="VARCHAR" />
+    <result column="USER_STAR_CLASS_CODE" property="userStarClassCode" jdbcType="VARCHAR" />
+    <result column="USER_STAR_CLASS" property="userStarClass" jdbcType="VARCHAR" />
+    <result column="USER_LOYALTY_CODE" property="userLoyaltyCode" jdbcType="VARCHAR" />
+    <result column="USER_LOYALTY" property="userLoyalty" jdbcType="VARCHAR" />
+    <result column="OWE_FEE_FLAG_CODE" property="oweFeeFlagCode" jdbcType="VARCHAR" />
+    <result column="OWE_FEE_FLAG" property="oweFeeFlag" jdbcType="VARCHAR" />
+    <result column="USER_STAGE_CODE" property="userStageCode" jdbcType="VARCHAR" />
+    <result column="USER_STAGE" property="userStage" jdbcType="VARCHAR" />
+    <result column="STATUS_CHANGE_CODE" property="statusChangeCode" jdbcType="VARCHAR" />
+    <result column="STATUS_CHANGE" property="statusChange" jdbcType="VARCHAR" />
+    <result column="IS_VALID" property="isValid" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="SEX_CODE" property="sexCode" jdbcType="VARCHAR" />
+    <result column="SEX" property="sex" jdbcType="VARCHAR" />
+    <result column="AGE" property="age" jdbcType="DECIMAL" />
+    <result column="ID_TYPE" property="idType" jdbcType="VARCHAR" />
+    <result column="ID_NO" property="idNo" jdbcType="VARCHAR" />
+    <result column="ID_IS_VALID" property="idIsValid" jdbcType="VARCHAR" />
+    <result column="DEVICE_COUNT" property="deviceCount" jdbcType="DECIMAL" />
+    <result column="POST_CODE" property="postCode" jdbcType="VARCHAR" />
+    <result column="CONTACT_PERSON" property="contactPerson" jdbcType="VARCHAR" />
+    <result column="CONTACT_TEL" property="contactTel" jdbcType="VARCHAR" />
+    <result column="CONTACT_ADDRESS" property="contactAddress" jdbcType="VARCHAR" />
+    <result column="E_MAIL_ADDRESS" property="eMailAddress" jdbcType="VARCHAR" />
+    <result column="VALID_CONTACT_TYPE" property="validContactType" jdbcType="VARCHAR" />
+    <result column="OPER_NO" property="operNo" jdbcType="VARCHAR" />
+    <result column="OLD_OPER_NO" property="oldOperNo" jdbcType="VARCHAR" />
+    <result column="ACCT_USER_CLASS" property="acctUserClass" jdbcType="VARCHAR" />
+    <result column="IN_GROUP_DATE" property="inGroupDate" jdbcType="TIMESTAMP" />
+    <result column="QUIT_GROUP_DATE" property="quitGroupDate" jdbcType="VARCHAR" />
+    <result column="VPN_NO" property="vpnNo" jdbcType="VARCHAR" />
+    <result column="DEVELOP_ID" property="developId" jdbcType="VARCHAR" />
+    <result column="DEVELOPER" property="developer" jdbcType="VARCHAR" />
+    <result column="DEVELOP_PHONE" property="developPhone" jdbcType="VARCHAR" />
+    <result column="PAY_DATE" property="payDate" jdbcType="TIMESTAMP" />
+    <result column="PAY_MONEY" property="payMoney" jdbcType="VARCHAR" />
+    <result column="G3F" property="g3f" jdbcType="VARCHAR" />
+    <result column="BIRTHDAY" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="LAST_LVL" property="lastLvl" jdbcType="VARCHAR" />
+    <result column="OWE_FLAG" property="oweFlag" jdbcType="VARCHAR" />
+    <result column="ASSESS_DATE" property="assessDate" jdbcType="TIMESTAMP" />
+    <result column="DEVELOP_NO" property="developNo" jdbcType="VARCHAR" />
+    <result column="DEVELOP_CHANNEL_NO" property="developChannelNo" jdbcType="VARCHAR" />
+    <result column="INNET_DURATION" property="innetDuration" jdbcType="VARCHAR" />
+    <result column="CRIDIT" property="cridit" jdbcType="DECIMAL" />
+    <result column="ID_ADDRESS" property="idAddress" jdbcType="VARCHAR" />
+    <result column="SUB_CLUB" property="subClub" jdbcType="VARCHAR" />
+    <result column="VIP_AVA_DURATION" property="vipAvaDuration" jdbcType="DECIMAL" />
+    <result column="IF_MADE_CARD" property="ifMadeCard" jdbcType="VARCHAR" />
+    <result column="IF_AGREEMENT" property="ifAgreement" jdbcType="VARCHAR" />
+    <result column="IF_SALE_MODE" property="ifSaleMode" jdbcType="VARCHAR" />
+    <result column="PHOTO_DESC" property="photoDesc" jdbcType="VARCHAR" />
+    <result column="EXPIRE_MONTH" property="expireMonth" jdbcType="VARCHAR" />
+    <result column="SEND_CARD_FLAG" property="sendCardFlag" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="INNET_DEPT" property="innetDept" jdbcType="VARCHAR" />
+    <result column="POLICY" property="policy" jdbcType="VARCHAR" />
+    <result column="BIRTHDAY_LUNAR" property="birthdayLunar" jdbcType="VARCHAR" />
+    <result column="NET_TYPE_CODE" property="netTypeCode" jdbcType="VARCHAR" />
+    <result column="NET_TYPE_DESC" property="netTypeDesc" jdbcType="VARCHAR" />
+    <result column="DIST_TIME" property="distTime" jdbcType="TIMESTAMP" />
+    <result column="SALE_MODE_BDATE" property="saleModeBdate" jdbcType="TIMESTAMP" />
+    <result column="SALE_MODE_EDATE" property="saleModeEdate" jdbcType="TIMESTAMP" />
+    <result column="VIP_CARD_START_DATE" property="vipCardStartDate" jdbcType="TIMESTAMP" />
+    <result column="VIP_CARD_END_DATE" property="vipCardEndDate" jdbcType="TIMESTAMP" />
+    <result column="IS_LOCAL_3G" property="isLocal3g" jdbcType="VARCHAR" />
+    <result column="CITY_ID_PAR" property="cityIdPar" jdbcType="VARCHAR" />
+    <result column="CITY_ID_PAR_DESC" property="cityIdParDesc" jdbcType="VARCHAR" />
+    <result column="CUST_TYPE" property="custType" jdbcType="VARCHAR" />
+    <result column="CUST_TYPE_DESC" property="custTypeDesc" jdbcType="VARCHAR" />
+    <result column="HIS_SALE_MODE" property="hisSaleMode" jdbcType="VARCHAR" />
+    <result column="USER_NO_BSS" property="userNoBss" jdbcType="VARCHAR" />
+    <result column="CYCLE_ID" property="cycleId" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="sy.model.HoldInfoUser" >
+    insert into HOLD_INFO_USER (USER_NO, DEVICE_NUMBER, CUSTOMER_NO, 
+      SVC_ID, SVC_DESC, AREA_ID, 
+      CITY_ID, AREA_DESC, CITY_DESC, 
+      BRAND_TYPE, BRAND_DESC, INNET_TYPE_CODE, 
+      INNET_TYPE, INNET_TYPE_DESC, SALE_TYPE_CODE, 
+      SALE_TYPE, ASSURE_NO, PAY_TYPE_CODE, 
+      PAY_TYPE, PAY_MODE_CODE, PAY_MODE, 
+      USER_PROPERTY_CODE, USER_PROPERTY, STATUS_CODE, 
+      USER_STATUS_DESC, INNET_DATE, FIRST_CALL_TIME, 
+      SHUT_DOWN_TIME, QUIT_NET_TIME, INNET_MONTH, 
+      USER_DINNER, USER_DINNER_DESC, DINNER_DESC, 
+      OFFICE_CODE, OFFICE, OFFICE_DETAIL, 
+      GROUP_ID, GROUP_NAME, GROUP_USER_TYPE_CODE, 
+      GROUP_USER_TYPE, GROUP_ITEM_ID, GROUP_ITEM_NAME, 
+      GROUP_ITEM_TYPE_CODE, GROUP_ITEM_TYPE, GROUP_USER_PROPERTY_CODE, 
+      GROUP_USER_PROPERTY, CRIDIT_LEVEL_CODE, CRIDIT_LEVEL, 
+      ALL_CHARGE, CONSUME_LVL, CONSUME_LVL_DESC, 
+      IS_ACCT_USER, ARPU_LAST_MONTH, ARPU_6MONTH, 
+      HIGH_TYPE, HIGH_TYPE_DESC, CARD_NO, 
+      USER_CLASS_CODE, USER_CLASS, ENTER_MONTH, 
+      USER_FLAG_CODE, USER_FLAG, LAST_USER_FLAG_CODE, 
+      LAST_USER_FLAG, USER_STAR_CLASS_CODE, USER_STAR_CLASS, 
+      USER_LOYALTY_CODE, USER_LOYALTY, OWE_FEE_FLAG_CODE, 
+      OWE_FEE_FLAG, USER_STAGE_CODE, USER_STAGE, 
+      STATUS_CHANGE_CODE, STATUS_CHANGE, IS_VALID, 
+      USER_NAME, SEX_CODE, SEX, 
+      AGE, ID_TYPE, ID_NO, 
+      ID_IS_VALID, DEVICE_COUNT, POST_CODE, 
+      CONTACT_PERSON, CONTACT_TEL, CONTACT_ADDRESS, 
+      E_MAIL_ADDRESS, VALID_CONTACT_TYPE, OPER_NO, 
+      OLD_OPER_NO, ACCT_USER_CLASS, IN_GROUP_DATE, 
+      QUIT_GROUP_DATE, VPN_NO, DEVELOP_ID, 
+      DEVELOPER, DEVELOP_PHONE, PAY_DATE, 
+      PAY_MONEY, G3F, BIRTHDAY, 
+      LAST_LVL, OWE_FLAG, ASSESS_DATE, 
+      DEVELOP_NO, DEVELOP_CHANNEL_NO, INNET_DURATION, 
+      CRIDIT, ID_ADDRESS, SUB_CLUB, 
+      VIP_AVA_DURATION, IF_MADE_CARD, IF_AGREEMENT, 
+      IF_SALE_MODE, PHOTO_DESC, EXPIRE_MONTH, 
+      SEND_CARD_FLAG, REMARK, INNET_DEPT, 
+      POLICY, BIRTHDAY_LUNAR, NET_TYPE_CODE, 
+      NET_TYPE_DESC, DIST_TIME, SALE_MODE_BDATE, 
+      SALE_MODE_EDATE, VIP_CARD_START_DATE, VIP_CARD_END_DATE, 
+      IS_LOCAL_3G, CITY_ID_PAR, CITY_ID_PAR_DESC, 
+      CUST_TYPE, CUST_TYPE_DESC, HIS_SALE_MODE, 
+      USER_NO_BSS, CYCLE_ID)
+    values (#{userNo,jdbcType=VARCHAR}, #{deviceNumber,jdbcType=VARCHAR}, #{customerNo,jdbcType=VARCHAR}, 
+      #{svcId,jdbcType=VARCHAR}, #{svcDesc,jdbcType=VARCHAR}, #{areaId,jdbcType=VARCHAR}, 
+      #{cityId,jdbcType=VARCHAR}, #{areaDesc,jdbcType=VARCHAR}, #{cityDesc,jdbcType=VARCHAR}, 
+      #{brandType,jdbcType=VARCHAR}, #{brandDesc,jdbcType=VARCHAR}, #{innetTypeCode,jdbcType=VARCHAR}, 
+      #{innetType,jdbcType=VARCHAR}, #{innetTypeDesc,jdbcType=VARCHAR}, #{saleTypeCode,jdbcType=VARCHAR}, 
+      #{saleType,jdbcType=VARCHAR}, #{assureNo,jdbcType=VARCHAR}, #{payTypeCode,jdbcType=VARCHAR}, 
+      #{payType,jdbcType=VARCHAR}, #{payModeCode,jdbcType=VARCHAR}, #{payMode,jdbcType=VARCHAR}, 
+      #{userPropertyCode,jdbcType=VARCHAR}, #{userProperty,jdbcType=VARCHAR}, #{statusCode,jdbcType=VARCHAR}, 
+      #{userStatusDesc,jdbcType=VARCHAR}, #{innetDate,jdbcType=TIMESTAMP}, #{firstCallTime,jdbcType=TIMESTAMP}, 
+      #{shutDownTime,jdbcType=TIMESTAMP}, #{quitNetTime,jdbcType=TIMESTAMP}, #{innetMonth,jdbcType=DECIMAL}, 
+      #{userDinner,jdbcType=VARCHAR}, #{userDinnerDesc,jdbcType=VARCHAR}, #{dinnerDesc,jdbcType=VARCHAR}, 
+      #{officeCode,jdbcType=VARCHAR}, #{office,jdbcType=VARCHAR}, #{officeDetail,jdbcType=VARCHAR}, 
+      #{groupId,jdbcType=VARCHAR}, #{groupName,jdbcType=VARCHAR}, #{groupUserTypeCode,jdbcType=VARCHAR}, 
+      #{groupUserType,jdbcType=VARCHAR}, #{groupItemId,jdbcType=VARCHAR}, #{groupItemName,jdbcType=VARCHAR}, 
+      #{groupItemTypeCode,jdbcType=VARCHAR}, #{groupItemType,jdbcType=VARCHAR}, #{groupUserPropertyCode,jdbcType=VARCHAR}, 
+      #{groupUserProperty,jdbcType=VARCHAR}, #{criditLevelCode,jdbcType=VARCHAR}, #{criditLevel,jdbcType=VARCHAR}, 
+      #{allCharge,jdbcType=DECIMAL}, #{consumeLvl,jdbcType=VARCHAR}, #{consumeLvlDesc,jdbcType=VARCHAR}, 
+      #{isAcctUser,jdbcType=VARCHAR}, #{arpuLastMonth,jdbcType=DECIMAL}, #{arpu6month,jdbcType=DECIMAL}, 
+      #{highType,jdbcType=VARCHAR}, #{highTypeDesc,jdbcType=VARCHAR}, #{cardNo,jdbcType=VARCHAR}, 
+      #{userClassCode,jdbcType=VARCHAR}, #{userClass,jdbcType=VARCHAR}, #{enterMonth,jdbcType=VARCHAR}, 
+      #{userFlagCode,jdbcType=VARCHAR}, #{userFlag,jdbcType=VARCHAR}, #{lastUserFlagCode,jdbcType=VARCHAR}, 
+      #{lastUserFlag,jdbcType=VARCHAR}, #{userStarClassCode,jdbcType=VARCHAR}, #{userStarClass,jdbcType=VARCHAR}, 
+      #{userLoyaltyCode,jdbcType=VARCHAR}, #{userLoyalty,jdbcType=VARCHAR}, #{oweFeeFlagCode,jdbcType=VARCHAR}, 
+      #{oweFeeFlag,jdbcType=VARCHAR}, #{userStageCode,jdbcType=VARCHAR}, #{userStage,jdbcType=VARCHAR}, 
+      #{statusChangeCode,jdbcType=VARCHAR}, #{statusChange,jdbcType=VARCHAR}, #{isValid,jdbcType=VARCHAR}, 
+      #{userName,jdbcType=VARCHAR}, #{sexCode,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{age,jdbcType=DECIMAL}, #{idType,jdbcType=VARCHAR}, #{idNo,jdbcType=VARCHAR}, 
+      #{idIsValid,jdbcType=VARCHAR}, #{deviceCount,jdbcType=DECIMAL}, #{postCode,jdbcType=VARCHAR}, 
+      #{contactPerson,jdbcType=VARCHAR}, #{contactTel,jdbcType=VARCHAR}, #{contactAddress,jdbcType=VARCHAR}, 
+      #{eMailAddress,jdbcType=VARCHAR}, #{validContactType,jdbcType=VARCHAR}, #{operNo,jdbcType=VARCHAR}, 
+      #{oldOperNo,jdbcType=VARCHAR}, #{acctUserClass,jdbcType=VARCHAR}, #{inGroupDate,jdbcType=TIMESTAMP}, 
+      #{quitGroupDate,jdbcType=VARCHAR}, #{vpnNo,jdbcType=VARCHAR}, #{developId,jdbcType=VARCHAR}, 
+      #{developer,jdbcType=VARCHAR}, #{developPhone,jdbcType=VARCHAR}, #{payDate,jdbcType=TIMESTAMP}, 
+      #{payMoney,jdbcType=VARCHAR}, #{g3f,jdbcType=VARCHAR}, #{birthday,jdbcType=TIMESTAMP}, 
+      #{lastLvl,jdbcType=VARCHAR}, #{oweFlag,jdbcType=VARCHAR}, #{assessDate,jdbcType=TIMESTAMP}, 
+      #{developNo,jdbcType=VARCHAR}, #{developChannelNo,jdbcType=VARCHAR}, #{innetDuration,jdbcType=VARCHAR}, 
+      #{cridit,jdbcType=DECIMAL}, #{idAddress,jdbcType=VARCHAR}, #{subClub,jdbcType=VARCHAR}, 
+      #{vipAvaDuration,jdbcType=DECIMAL}, #{ifMadeCard,jdbcType=VARCHAR}, #{ifAgreement,jdbcType=VARCHAR}, 
+      #{ifSaleMode,jdbcType=VARCHAR}, #{photoDesc,jdbcType=VARCHAR}, #{expireMonth,jdbcType=VARCHAR}, 
+      #{sendCardFlag,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{innetDept,jdbcType=VARCHAR}, 
+      #{policy,jdbcType=VARCHAR}, #{birthdayLunar,jdbcType=VARCHAR}, #{netTypeCode,jdbcType=VARCHAR}, 
+      #{netTypeDesc,jdbcType=VARCHAR}, #{distTime,jdbcType=TIMESTAMP}, #{saleModeBdate,jdbcType=TIMESTAMP}, 
+      #{saleModeEdate,jdbcType=TIMESTAMP}, #{vipCardStartDate,jdbcType=TIMESTAMP}, #{vipCardEndDate,jdbcType=TIMESTAMP}, 
+      #{isLocal3g,jdbcType=VARCHAR}, #{cityIdPar,jdbcType=VARCHAR}, #{cityIdParDesc,jdbcType=VARCHAR}, 
+      #{custType,jdbcType=VARCHAR}, #{custTypeDesc,jdbcType=VARCHAR}, #{hisSaleMode,jdbcType=VARCHAR}, 
+      #{userNoBss,jdbcType=VARCHAR}, #{cycleId,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="sy.model.HoldInfoUser" >
+    insert into HOLD_INFO_USER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userNo != null" >
+        USER_NO,
+      </if>
+      <if test="deviceNumber != null" >
+        DEVICE_NUMBER,
+      </if>
+      <if test="customerNo != null" >
+        CUSTOMER_NO,
+      </if>
+      <if test="svcId != null" >
+        SVC_ID,
+      </if>
+      <if test="svcDesc != null" >
+        SVC_DESC,
+      </if>
+      <if test="areaId != null" >
+        AREA_ID,
+      </if>
+      <if test="cityId != null" >
+        CITY_ID,
+      </if>
+      <if test="areaDesc != null" >
+        AREA_DESC,
+      </if>
+      <if test="cityDesc != null" >
+        CITY_DESC,
+      </if>
+      <if test="brandType != null" >
+        BRAND_TYPE,
+      </if>
+      <if test="brandDesc != null" >
+        BRAND_DESC,
+      </if>
+      <if test="innetTypeCode != null" >
+        INNET_TYPE_CODE,
+      </if>
+      <if test="innetType != null" >
+        INNET_TYPE,
+      </if>
+      <if test="innetTypeDesc != null" >
+        INNET_TYPE_DESC,
+      </if>
+      <if test="saleTypeCode != null" >
+        SALE_TYPE_CODE,
+      </if>
+      <if test="saleType != null" >
+        SALE_TYPE,
+      </if>
+      <if test="assureNo != null" >
+        ASSURE_NO,
+      </if>
+      <if test="payTypeCode != null" >
+        PAY_TYPE_CODE,
+      </if>
+      <if test="payType != null" >
+        PAY_TYPE,
+      </if>
+      <if test="payModeCode != null" >
+        PAY_MODE_CODE,
+      </if>
+      <if test="payMode != null" >
+        PAY_MODE,
+      </if>
+      <if test="userPropertyCode != null" >
+        USER_PROPERTY_CODE,
+      </if>
+      <if test="userProperty != null" >
+        USER_PROPERTY,
+      </if>
+      <if test="statusCode != null" >
+        STATUS_CODE,
+      </if>
+      <if test="userStatusDesc != null" >
+        USER_STATUS_DESC,
+      </if>
+      <if test="innetDate != null" >
+        INNET_DATE,
+      </if>
+      <if test="firstCallTime != null" >
+        FIRST_CALL_TIME,
+      </if>
+      <if test="shutDownTime != null" >
+        SHUT_DOWN_TIME,
+      </if>
+      <if test="quitNetTime != null" >
+        QUIT_NET_TIME,
+      </if>
+      <if test="innetMonth != null" >
+        INNET_MONTH,
+      </if>
+      <if test="userDinner != null" >
+        USER_DINNER,
+      </if>
+      <if test="userDinnerDesc != null" >
+        USER_DINNER_DESC,
+      </if>
+      <if test="dinnerDesc != null" >
+        DINNER_DESC,
+      </if>
+      <if test="officeCode != null" >
+        OFFICE_CODE,
+      </if>
+      <if test="office != null" >
+        OFFICE,
+      </if>
+      <if test="officeDetail != null" >
+        OFFICE_DETAIL,
+      </if>
+      <if test="groupId != null" >
+        GROUP_ID,
+      </if>
+      <if test="groupName != null" >
+        GROUP_NAME,
+      </if>
+      <if test="groupUserTypeCode != null" >
+        GROUP_USER_TYPE_CODE,
+      </if>
+      <if test="groupUserType != null" >
+        GROUP_USER_TYPE,
+      </if>
+      <if test="groupItemId != null" >
+        GROUP_ITEM_ID,
+      </if>
+      <if test="groupItemName != null" >
+        GROUP_ITEM_NAME,
+      </if>
+      <if test="groupItemTypeCode != null" >
+        GROUP_ITEM_TYPE_CODE,
+      </if>
+      <if test="groupItemType != null" >
+        GROUP_ITEM_TYPE,
+      </if>
+      <if test="groupUserPropertyCode != null" >
+        GROUP_USER_PROPERTY_CODE,
+      </if>
+      <if test="groupUserProperty != null" >
+        GROUP_USER_PROPERTY,
+      </if>
+      <if test="criditLevelCode != null" >
+        CRIDIT_LEVEL_CODE,
+      </if>
+      <if test="criditLevel != null" >
+        CRIDIT_LEVEL,
+      </if>
+      <if test="allCharge != null" >
+        ALL_CHARGE,
+      </if>
+      <if test="consumeLvl != null" >
+        CONSUME_LVL,
+      </if>
+      <if test="consumeLvlDesc != null" >
+        CONSUME_LVL_DESC,
+      </if>
+      <if test="isAcctUser != null" >
+        IS_ACCT_USER,
+      </if>
+      <if test="arpuLastMonth != null" >
+        ARPU_LAST_MONTH,
+      </if>
+      <if test="arpu6month != null" >
+        ARPU_6MONTH,
+      </if>
+      <if test="highType != null" >
+        HIGH_TYPE,
+      </if>
+      <if test="highTypeDesc != null" >
+        HIGH_TYPE_DESC,
+      </if>
+      <if test="cardNo != null" >
+        CARD_NO,
+      </if>
+      <if test="userClassCode != null" >
+        USER_CLASS_CODE,
+      </if>
+      <if test="userClass != null" >
+        USER_CLASS,
+      </if>
+      <if test="enterMonth != null" >
+        ENTER_MONTH,
+      </if>
+      <if test="userFlagCode != null" >
+        USER_FLAG_CODE,
+      </if>
+      <if test="userFlag != null" >
+        USER_FLAG,
+      </if>
+      <if test="lastUserFlagCode != null" >
+        LAST_USER_FLAG_CODE,
+      </if>
+      <if test="lastUserFlag != null" >
+        LAST_USER_FLAG,
+      </if>
+      <if test="userStarClassCode != null" >
+        USER_STAR_CLASS_CODE,
+      </if>
+      <if test="userStarClass != null" >
+        USER_STAR_CLASS,
+      </if>
+      <if test="userLoyaltyCode != null" >
+        USER_LOYALTY_CODE,
+      </if>
+      <if test="userLoyalty != null" >
+        USER_LOYALTY,
+      </if>
+      <if test="oweFeeFlagCode != null" >
+        OWE_FEE_FLAG_CODE,
+      </if>
+      <if test="oweFeeFlag != null" >
+        OWE_FEE_FLAG,
+      </if>
+      <if test="userStageCode != null" >
+        USER_STAGE_CODE,
+      </if>
+      <if test="userStage != null" >
+        USER_STAGE,
+      </if>
+      <if test="statusChangeCode != null" >
+        STATUS_CHANGE_CODE,
+      </if>
+      <if test="statusChange != null" >
+        STATUS_CHANGE,
+      </if>
+      <if test="isValid != null" >
+        IS_VALID,
+      </if>
+      <if test="userName != null" >
+        USER_NAME,
+      </if>
+      <if test="sexCode != null" >
+        SEX_CODE,
+      </if>
+      <if test="sex != null" >
+        SEX,
+      </if>
+      <if test="age != null" >
+        AGE,
+      </if>
+      <if test="idType != null" >
+        ID_TYPE,
+      </if>
+      <if test="idNo != null" >
+        ID_NO,
+      </if>
+      <if test="idIsValid != null" >
+        ID_IS_VALID,
+      </if>
+      <if test="deviceCount != null" >
+        DEVICE_COUNT,
+      </if>
+      <if test="postCode != null" >
+        POST_CODE,
+      </if>
+      <if test="contactPerson != null" >
+        CONTACT_PERSON,
+      </if>
+      <if test="contactTel != null" >
+        CONTACT_TEL,
+      </if>
+      <if test="contactAddress != null" >
+        CONTACT_ADDRESS,
+      </if>
+      <if test="eMailAddress != null" >
+        E_MAIL_ADDRESS,
+      </if>
+      <if test="validContactType != null" >
+        VALID_CONTACT_TYPE,
+      </if>
+      <if test="operNo != null" >
+        OPER_NO,
+      </if>
+      <if test="oldOperNo != null" >
+        OLD_OPER_NO,
+      </if>
+      <if test="acctUserClass != null" >
+        ACCT_USER_CLASS,
+      </if>
+      <if test="inGroupDate != null" >
+        IN_GROUP_DATE,
+      </if>
+      <if test="quitGroupDate != null" >
+        QUIT_GROUP_DATE,
+      </if>
+      <if test="vpnNo != null" >
+        VPN_NO,
+      </if>
+      <if test="developId != null" >
+        DEVELOP_ID,
+      </if>
+      <if test="developer != null" >
+        DEVELOPER,
+      </if>
+      <if test="developPhone != null" >
+        DEVELOP_PHONE,
+      </if>
+      <if test="payDate != null" >
+        PAY_DATE,
+      </if>
+      <if test="payMoney != null" >
+        PAY_MONEY,
+      </if>
+      <if test="g3f != null" >
+        G3F,
+      </if>
+      <if test="birthday != null" >
+        BIRTHDAY,
+      </if>
+      <if test="lastLvl != null" >
+        LAST_LVL,
+      </if>
+      <if test="oweFlag != null" >
+        OWE_FLAG,
+      </if>
+      <if test="assessDate != null" >
+        ASSESS_DATE,
+      </if>
+      <if test="developNo != null" >
+        DEVELOP_NO,
+      </if>
+      <if test="developChannelNo != null" >
+        DEVELOP_CHANNEL_NO,
+      </if>
+      <if test="innetDuration != null" >
+        INNET_DURATION,
+      </if>
+      <if test="cridit != null" >
+        CRIDIT,
+      </if>
+      <if test="idAddress != null" >
+        ID_ADDRESS,
+      </if>
+      <if test="subClub != null" >
+        SUB_CLUB,
+      </if>
+      <if test="vipAvaDuration != null" >
+        VIP_AVA_DURATION,
+      </if>
+      <if test="ifMadeCard != null" >
+        IF_MADE_CARD,
+      </if>
+      <if test="ifAgreement != null" >
+        IF_AGREEMENT,
+      </if>
+      <if test="ifSaleMode != null" >
+        IF_SALE_MODE,
+      </if>
+      <if test="photoDesc != null" >
+        PHOTO_DESC,
+      </if>
+      <if test="expireMonth != null" >
+        EXPIRE_MONTH,
+      </if>
+      <if test="sendCardFlag != null" >
+        SEND_CARD_FLAG,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="innetDept != null" >
+        INNET_DEPT,
+      </if>
+      <if test="policy != null" >
+        POLICY,
+      </if>
+      <if test="birthdayLunar != null" >
+        BIRTHDAY_LUNAR,
+      </if>
+      <if test="netTypeCode != null" >
+        NET_TYPE_CODE,
+      </if>
+      <if test="netTypeDesc != null" >
+        NET_TYPE_DESC,
+      </if>
+      <if test="distTime != null" >
+        DIST_TIME,
+      </if>
+      <if test="saleModeBdate != null" >
+        SALE_MODE_BDATE,
+      </if>
+      <if test="saleModeEdate != null" >
+        SALE_MODE_EDATE,
+      </if>
+      <if test="vipCardStartDate != null" >
+        VIP_CARD_START_DATE,
+      </if>
+      <if test="vipCardEndDate != null" >
+        VIP_CARD_END_DATE,
+      </if>
+      <if test="isLocal3g != null" >
+        IS_LOCAL_3G,
+      </if>
+      <if test="cityIdPar != null" >
+        CITY_ID_PAR,
+      </if>
+      <if test="cityIdParDesc != null" >
+        CITY_ID_PAR_DESC,
+      </if>
+      <if test="custType != null" >
+        CUST_TYPE,
+      </if>
+      <if test="custTypeDesc != null" >
+        CUST_TYPE_DESC,
+      </if>
+      <if test="hisSaleMode != null" >
+        HIS_SALE_MODE,
+      </if>
+      <if test="userNoBss != null" >
+        USER_NO_BSS,
+      </if>
+      <if test="cycleId != null" >
+        CYCLE_ID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userNo != null" >
+        #{userNo,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceNumber != null" >
+        #{deviceNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="customerNo != null" >
+        #{customerNo,jdbcType=VARCHAR},
+      </if>
+      <if test="svcId != null" >
+        #{svcId,jdbcType=VARCHAR},
+      </if>
+      <if test="svcDesc != null" >
+        #{svcDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="areaId != null" >
+        #{areaId,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        #{cityId,jdbcType=VARCHAR},
+      </if>
+      <if test="areaDesc != null" >
+        #{areaDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="cityDesc != null" >
+        #{cityDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="brandType != null" >
+        #{brandType,jdbcType=VARCHAR},
+      </if>
+      <if test="brandDesc != null" >
+        #{brandDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="innetTypeCode != null" >
+        #{innetTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="innetType != null" >
+        #{innetType,jdbcType=VARCHAR},
+      </if>
+      <if test="innetTypeDesc != null" >
+        #{innetTypeDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="saleTypeCode != null" >
+        #{saleTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="saleType != null" >
+        #{saleType,jdbcType=VARCHAR},
+      </if>
+      <if test="assureNo != null" >
+        #{assureNo,jdbcType=VARCHAR},
+      </if>
+      <if test="payTypeCode != null" >
+        #{payTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payType != null" >
+        #{payType,jdbcType=VARCHAR},
+      </if>
+      <if test="payModeCode != null" >
+        #{payModeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payMode != null" >
+        #{payMode,jdbcType=VARCHAR},
+      </if>
+      <if test="userPropertyCode != null" >
+        #{userPropertyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userProperty != null" >
+        #{userProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="statusCode != null" >
+        #{statusCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userStatusDesc != null" >
+        #{userStatusDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="innetDate != null" >
+        #{innetDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="firstCallTime != null" >
+        #{firstCallTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shutDownTime != null" >
+        #{shutDownTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="quitNetTime != null" >
+        #{quitNetTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="innetMonth != null" >
+        #{innetMonth,jdbcType=DECIMAL},
+      </if>
+      <if test="userDinner != null" >
+        #{userDinner,jdbcType=VARCHAR},
+      </if>
+      <if test="userDinnerDesc != null" >
+        #{userDinnerDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="dinnerDesc != null" >
+        #{dinnerDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="officeCode != null" >
+        #{officeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="office != null" >
+        #{office,jdbcType=VARCHAR},
+      </if>
+      <if test="officeDetail != null" >
+        #{officeDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="groupId != null" >
+        #{groupId,jdbcType=VARCHAR},
+      </if>
+      <if test="groupName != null" >
+        #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupUserTypeCode != null" >
+        #{groupUserTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupUserType != null" >
+        #{groupUserType,jdbcType=VARCHAR},
+      </if>
+      <if test="groupItemId != null" >
+        #{groupItemId,jdbcType=VARCHAR},
+      </if>
+      <if test="groupItemName != null" >
+        #{groupItemName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupItemTypeCode != null" >
+        #{groupItemTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupItemType != null" >
+        #{groupItemType,jdbcType=VARCHAR},
+      </if>
+      <if test="groupUserPropertyCode != null" >
+        #{groupUserPropertyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="groupUserProperty != null" >
+        #{groupUserProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="criditLevelCode != null" >
+        #{criditLevelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="criditLevel != null" >
+        #{criditLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="allCharge != null" >
+        #{allCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="consumeLvl != null" >
+        #{consumeLvl,jdbcType=VARCHAR},
+      </if>
+      <if test="consumeLvlDesc != null" >
+        #{consumeLvlDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="isAcctUser != null" >
+        #{isAcctUser,jdbcType=VARCHAR},
+      </if>
+      <if test="arpuLastMonth != null" >
+        #{arpuLastMonth,jdbcType=DECIMAL},
+      </if>
+      <if test="arpu6month != null" >
+        #{arpu6month,jdbcType=DECIMAL},
+      </if>
+      <if test="highType != null" >
+        #{highType,jdbcType=VARCHAR},
+      </if>
+      <if test="highTypeDesc != null" >
+        #{highTypeDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNo != null" >
+        #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="userClassCode != null" >
+        #{userClassCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userClass != null" >
+        #{userClass,jdbcType=VARCHAR},
+      </if>
+      <if test="enterMonth != null" >
+        #{enterMonth,jdbcType=VARCHAR},
+      </if>
+      <if test="userFlagCode != null" >
+        #{userFlagCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userFlag != null" >
+        #{userFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUserFlagCode != null" >
+        #{lastUserFlagCode,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUserFlag != null" >
+        #{lastUserFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="userStarClassCode != null" >
+        #{userStarClassCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userStarClass != null" >
+        #{userStarClass,jdbcType=VARCHAR},
+      </if>
+      <if test="userLoyaltyCode != null" >
+        #{userLoyaltyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userLoyalty != null" >
+        #{userLoyalty,jdbcType=VARCHAR},
+      </if>
+      <if test="oweFeeFlagCode != null" >
+        #{oweFeeFlagCode,jdbcType=VARCHAR},
+      </if>
+      <if test="oweFeeFlag != null" >
+        #{oweFeeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="userStageCode != null" >
+        #{userStageCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userStage != null" >
+        #{userStage,jdbcType=VARCHAR},
+      </if>
+      <if test="statusChangeCode != null" >
+        #{statusChangeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="statusChange != null" >
+        #{statusChange,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null" >
+        #{isValid,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="sexCode != null" >
+        #{sexCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=DECIMAL},
+      </if>
+      <if test="idType != null" >
+        #{idType,jdbcType=VARCHAR},
+      </if>
+      <if test="idNo != null" >
+        #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idIsValid != null" >
+        #{idIsValid,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceCount != null" >
+        #{deviceCount,jdbcType=DECIMAL},
+      </if>
+      <if test="postCode != null" >
+        #{postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPerson != null" >
+        #{contactPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="contactTel != null" >
+        #{contactTel,jdbcType=VARCHAR},
+      </if>
+      <if test="contactAddress != null" >
+        #{contactAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="eMailAddress != null" >
+        #{eMailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="validContactType != null" >
+        #{validContactType,jdbcType=VARCHAR},
+      </if>
+      <if test="operNo != null" >
+        #{operNo,jdbcType=VARCHAR},
+      </if>
+      <if test="oldOperNo != null" >
+        #{oldOperNo,jdbcType=VARCHAR},
+      </if>
+      <if test="acctUserClass != null" >
+        #{acctUserClass,jdbcType=VARCHAR},
+      </if>
+      <if test="inGroupDate != null" >
+        #{inGroupDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="quitGroupDate != null" >
+        #{quitGroupDate,jdbcType=VARCHAR},
+      </if>
+      <if test="vpnNo != null" >
+        #{vpnNo,jdbcType=VARCHAR},
+      </if>
+      <if test="developId != null" >
+        #{developId,jdbcType=VARCHAR},
+      </if>
+      <if test="developer != null" >
+        #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="developPhone != null" >
+        #{developPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="payDate != null" >
+        #{payDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="payMoney != null" >
+        #{payMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="g3f != null" >
+        #{g3f,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLvl != null" >
+        #{lastLvl,jdbcType=VARCHAR},
+      </if>
+      <if test="oweFlag != null" >
+        #{oweFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="assessDate != null" >
+        #{assessDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="developNo != null" >
+        #{developNo,jdbcType=VARCHAR},
+      </if>
+      <if test="developChannelNo != null" >
+        #{developChannelNo,jdbcType=VARCHAR},
+      </if>
+      <if test="innetDuration != null" >
+        #{innetDuration,jdbcType=VARCHAR},
+      </if>
+      <if test="cridit != null" >
+        #{cridit,jdbcType=DECIMAL},
+      </if>
+      <if test="idAddress != null" >
+        #{idAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="subClub != null" >
+        #{subClub,jdbcType=VARCHAR},
+      </if>
+      <if test="vipAvaDuration != null" >
+        #{vipAvaDuration,jdbcType=DECIMAL},
+      </if>
+      <if test="ifMadeCard != null" >
+        #{ifMadeCard,jdbcType=VARCHAR},
+      </if>
+      <if test="ifAgreement != null" >
+        #{ifAgreement,jdbcType=VARCHAR},
+      </if>
+      <if test="ifSaleMode != null" >
+        #{ifSaleMode,jdbcType=VARCHAR},
+      </if>
+      <if test="photoDesc != null" >
+        #{photoDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="expireMonth != null" >
+        #{expireMonth,jdbcType=VARCHAR},
+      </if>
+      <if test="sendCardFlag != null" >
+        #{sendCardFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="innetDept != null" >
+        #{innetDept,jdbcType=VARCHAR},
+      </if>
+      <if test="policy != null" >
+        #{policy,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdayLunar != null" >
+        #{birthdayLunar,jdbcType=VARCHAR},
+      </if>
+      <if test="netTypeCode != null" >
+        #{netTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="netTypeDesc != null" >
+        #{netTypeDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="distTime != null" >
+        #{distTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="saleModeBdate != null" >
+        #{saleModeBdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="saleModeEdate != null" >
+        #{saleModeEdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vipCardStartDate != null" >
+        #{vipCardStartDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vipCardEndDate != null" >
+        #{vipCardEndDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isLocal3g != null" >
+        #{isLocal3g,jdbcType=VARCHAR},
+      </if>
+      <if test="cityIdPar != null" >
+        #{cityIdPar,jdbcType=VARCHAR},
+      </if>
+      <if test="cityIdParDesc != null" >
+        #{cityIdParDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="custType != null" >
+        #{custType,jdbcType=VARCHAR},
+      </if>
+      <if test="custTypeDesc != null" >
+        #{custTypeDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="hisSaleMode != null" >
+        #{hisSaleMode,jdbcType=VARCHAR},
+      </if>
+      <if test="userNoBss != null" >
+        #{userNoBss,jdbcType=VARCHAR},
+      </if>
+      <if test="cycleId != null" >
+        #{cycleId,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>
