@@ -24,7 +24,9 @@ import org.springframework.core.io.Resource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import sy.model.HonestWeixinUser;
 import sy.model.User;
+import sy.service.HonestWeixinUserServiceI;
 import sy.service.UserServiceI;
 
 import com.alibaba.fastjson.JSON;
@@ -36,6 +38,18 @@ public class TestMybatis {
 	private static final Logger logger = Logger.getLogger(TestMybatis.class);
 
 	private UserServiceI userService;
+	private HonestWeixinUserServiceI honestWeixinUserService;
+	/**
+	 * @return the honestWeixinUserService
+	 */
+	public HonestWeixinUserServiceI getHonestWeixinUserService() {
+		return honestWeixinUserService;
+	}
+
+@Autowired
+	public void setHonestWeixinUserService(HonestWeixinUserServiceI honestWeixinUserService) {
+		this.honestWeixinUserService = honestWeixinUserService;
+	}
 
 	public UserServiceI getUserService() {
 		return userService;
@@ -70,11 +84,27 @@ public class TestMybatis {
 		logger.info(JSON.toJSONStringWithDateFormat(l, "yyyy-MM-dd HH:mm:ss"));
 	}
 	
+	@Test
+	public void test5(){
+		logger.info("ok");
+		logger.info( JSON.toJSONString(honestWeixinUserService.getHonestWeixinUserByOpenId("o53-7js5FdmNiuN0BWQ01uhbXYoI")));
+	}
+	
 	public static void main(String args[]){
 		ApplicationContext appLicationContext=null;
 		String[] fileUrl= new String[]{"classpath*:*spring*.xml"};
 		appLicationContext= new ClassPathXmlApplicationContext(fileUrl);
 		UserServiceI us=(UserServiceI)appLicationContext.getBean("userService");
-		us.getAll();
+		HonestWeixinUserServiceI honestWeixinUserS= (HonestWeixinUserServiceI)appLicationContext.getBean("honestWeixinUserService");
+		System.out.println("ok1");
+		logger.info("ok!!!!");
+		HonestWeixinUser wxUser=null;
+		wxUser= honestWeixinUserS.getHonestWeixinUserByOpenId("o53-7js5FdmNiuN0BWQ01uhbXYoI");
+		logger.info("111111111111"+JSON.toJSONString(wxUser));
+		wxUser.getHeadImgUrl();
+		List<HonestWeixinUser> users=honestWeixinUserS.getAllHonestWeixinUser();
+		for(HonestWeixinUser u:users){
+			logger.info(u.getHeadImgUrl());
+		}
 	}
 }
