@@ -1,7 +1,7 @@
 package sy.service;
 
+import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +28,16 @@ public class HonestWeixinUserServiceImpl implements HonestWeixinUserServiceI {
 	@Override
 	public List<HonestWeixinUser> getAllHonestWeixinUser() {
 		 return this.honestWeixinUserMapper.getAllHonestWeixinUser();
+	}
+
+	@Override
+	public List<String> getAllUserHeadImg() {
+		List<String> headImgs=new ArrayList<String>() ;
+		for(HonestWeixinUser user:this.getAllHonestWeixinUser()){
+			headImgs.add(user.getHeadImgUrl());
+		}
+		return headImgs;
+		
 	}
 
 }

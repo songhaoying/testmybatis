@@ -8,9 +8,12 @@
 <title>Insert title here by songhaoyingW530</title>
 </head>
 <body>
+<%-- 
 <c:forEach items="${weixinUsers}" var="user">
 ${user.nickName } <img src="${user.headImgUrl }"/> <br/>
-
+ --%>
+ <c:forEach items="${weixinUserImgs}" var="img">
+  <img src="${img}"/> 
 </c:forEach>
 
 </body>

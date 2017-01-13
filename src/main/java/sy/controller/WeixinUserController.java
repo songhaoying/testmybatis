@@ -30,8 +30,8 @@ public class WeixinUserController {
 
 	@RequestMapping("/showUserImg")
 	public String showUserImg( HttpServletRequest request ){
-		List<HonestWeixinUser> weixinUsers= this.honestWeixinUserService.getAllHonestWeixinUser();
-		request.setAttribute("weixinUsers", weixinUsers);
+	//	List<HonestWeixinUser> weixinUsers= this.honestWeixinUserService.getAllHonestWeixinUser();
+		request.setAttribute("weixinUserImgs", this.honestWeixinUserService.getAllUserHeadImg());
 		return "showUserImg";
 	}
 }
